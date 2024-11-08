@@ -1,0 +1,124 @@
+Proj_name: DCMAN_Concat_Fn15_202405
+Random_seed: 2
+
+### Network Architecture
+Input_frame_num: 15      # Numbers of Frames in a video (sliding window)
+Network_name: "DCMAN"
+Channel_merge: "concat"
+
+### Network Training Process
+Epoch_size: 4000       # Number of batches in an epoch
+Batch_size: 10         # Number of video in a mini-batch
+LR: 0.0001
+Iter_num: 100           # Number of Iterations (Net trained with an epoch)
+
+### Simulation
+Img_size: [120, 120]
+Simulation_dsample: [1, 2]
+
+### Loss function
+Loss: 
+  name: L2_Weighted
+  params:
+    gamma: 1
+
+
+### Dataset Definition
+Dataset:
+  train:
+    - path: /data/datasets/cyx_aligned_datasets/Dataset_0320_new/train/
+      layer: 1
+      weight: 1
+      type: .tif
+
+  test:
+    - path: /data/datasets/cyx_aligned_datasets/Dataset_0320_new/test/220x220/
+      layer: 1
+      weight: 1
+      type: .tif
+    - path: /data/datasets/cyx_aligned_datasets/Dataset_0320_new/test/180x160/
+      layer: 1
+      weight: 1
+      type: .tif
+
+  test_220x220:
+    - path: /data/datasets/cyx_aligned_datasets/Dataset_0320_new/test/220x220/
+      layer: 1
+      weight: 1
+      type: .tif
+  test_180x160:
+    - path: /data/datasets/cyx_aligned_datasets/Dataset_0320_new/test/180x160/
+      layer: 1
+      weight: 1
+      type: .tif
+  real:
+    # - path: /data/datasets/cyx_aligned_datasets/Data0717_real_new
+    #   layer: 1
+    #   weight: 1
+    #   type: .tif
+    # - path: /data/datasets/cyx_aligned_datasets/Data0718_real_new
+    #   layer: 1
+    #   weight: 1
+    #   type: .tif
+    # - path: /data/datasets/cyx_aligned_datasets/Data0718_time_real3
+    #   layer: 1
+    #   weight: 1
+    #   type: .tif
+    # - path: /data/datasets/cyx_aligned_datasets/Data0718_time_real10
+    #   layer: 1
+    #   weight: 1
+    #   type: .tif
+    # - path: /data/datasets/cyx_aligned_datasets/Data0720_repeatmg
+    #   layer: 1
+    #   weight: 1
+    #   type: .tif
+    # - path: /data/datasets/cyx_aligned_datasets/Data0727_duration
+    #   layer: 1
+    #   weight: 1
+    #   type: .tif
+    # - path: /home/cyx/DCMAN-bio/dataset/Data0911_time_real10
+    #   layer: 1
+    #   weight: 1
+    #   type: .tif
+    # - path: /home/cyx/DCMAN-bio/dataset/Data0915_time_real3
+    #   layer: 1
+    #   weight: 1
+    #   type: .tif
+    # - path: /home/cyx/DCMAN-bio/dataset/Data1006_time_real10
+    #   layer: 1
+    #   weight: 1
+    #   type: .tif
+    # - path: /home/cyx/DCMAN-bio/dataset/Data1009_time_real3
+    #   layer: 1
+    #   weight: 1
+    #   type: .tif
+    # - path: /home/cyx/DCMAN-bio/dataset/Data1106_time_real33
+    #   layer: 1
+    #   weight: 1
+    #   type: .tif
+    # - path: /home/cyx/DCMAN-bio/dataset/Data1106_time_real10
+    #   layer: 1
+    #   weight: 1
+    #   type: .tif
+    # - path: /home/cyx/DCMAN-bio/dataset/Data1106_time_real3
+    #   layer: 1
+    #   weight: 1
+    #   type: .tif
+    # - path: /ssd/1/cyx/DCMAN-bio/dataset/Data20240426_dsdna
+    #   layer: 1
+    #   weight: 1
+    #   type: .tif
+    # - path: /ssd/1/cyx/DCMAN-bio/dataset/Data20240506_sCMOS/100
+    #   layer: 1
+    #   weight: 1
+    #   type: .tif
+    - path: /ssd/1/cyx/DCMAN-bio/dataset/Data20240611_150x
+      layer: 1
+      weight: 1
+      type: .tif
+    # - path: /ssd/1/cyx/DCMAN-bio/dataset/Data20240505_4PN
+    #   layer: 1
+    #   weight: 1
+    #   type: .tif
+      
+

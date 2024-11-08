@@ -1,0 +1,2 @@
+
+python Test.py -opt Exp/Data0511/DCMAN_Concat_Fn15_HJHS_ALL.yaml -gpu 0 -dataset test_220x220 -load_pkl Exp/experiments_outputs/train/DCMAN_Concat_Fn15_0320_2023_0515_170206_076694/pklmodels/train_iter_100.pkl -im_resize 220,220 -max_n_frame 50000
