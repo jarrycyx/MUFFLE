@@ -1,5 +1,5 @@
 # MUFFLE official repo.
-[![DOI](https://zenodo.org/badge/750767181.svg)](https://doi.org/10.5281/zenodo.14054167)
+[![DOI](https://zenodo.org/badge/750767181.svg)](https://doi.org/10.5281/zenodo.14054240)
 
 Supervised multi-frame dual-channel denoising enables long-term single-molecule FRET under extremely low photon budget
 
